@@ -27,6 +27,9 @@
     </div>
     <div id="footer" class="pb-5">
       <div class="inline-flex justify-content">
+        <a href="/pdfs/Curriculum.pdf" download="Jesus_Estevez_Curriculum.pdf">
+          <img class="h-6 w-6 mx-1" src="@/assets/images/cv.svg" alt />
+        </a>
         <a href="https://github.com/jEstevezRod" target="_blank">
           <img class="h-6 w-6 mx-1" src="@/assets/images/github.svg" alt="Github Logo" />
         </a>
