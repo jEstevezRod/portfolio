@@ -6,7 +6,7 @@
           <img
             ref="bubble"
             class="absolute h-full w-full rounded-full object-cover"
-            src="@/assets/images/jesus-low.png"
+            src="@/assets/images/jesus-low.jpg"
             alt="Profile image of Jesus"
           />
         </div>
