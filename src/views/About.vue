@@ -209,10 +209,116 @@
                 </div>
             </div>
 
+            <div ref="t8" id="t8" class="timeline-item flex flex-row justify-center pt-8 pb-4 w-100 ">
+                <div class="timeline-item-start hidden md:flex items-center justify-end w-5/6 md:w-1/4">
+
+                </div>
+                <div class="timeline-item-center md:flex hidden items-center justify-center min-w-1/6 w-1/6 mx-3">
+                    <div class=" flex items-center justify-center bullet bg-gray-200">
+                        2021
+                    </div>
+                </div>
+                <div class="timeline-item-end w-5/6 md:w-1/4 flex items-center justify-start">
+                    <div class="relative bg-gray-300 py-8 px-4 flex flex-col items-center justify-center rounded shadow-lg">
+                        <div class="year-mobile bg-gray-400 md:hidden"> 2021</div>
+                        <div class="arrow-left bg-gray-300 hidden md:block"></div>
+
+                        <div class="inline-flex flex-row flex-wrap justify-around w-full">
+                            <img class="h-16" src="@/assets/images/fitness.png" alt="fitness kpi logo">
+                        </div>
+                        <p class="mt-3">
+                             Joined <a href="https://fitness-kpi.com/" class="underline">Fitness Technologies</a>! 💙
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div ref="t9" id="t9" class="timeline-item flex flex-row justify-center pt-8 pb-4">
+                <div class="timeline-item-start flex items-center justify-end w-5/6 md:w-1/4">
+                    <div class="relative bg-gray-300 py-8 px-4 flex flex-col items-center justify-center rounded shadow-lg">
+                        <div class="year-mobile bg-gray-400 md:hidden"> 2022</div>
+                        <div class="arrow-right bg-gray-300 hidden md:block"></div>
+                        <div class="inline-flex flex-row flex-wrap justify-around w-full">
+                            <img class="h-16" src="@/assets/images/lucid.png" alt="fitness kpi logo">
+                        </div>
+                        <p class="mt-3">
+                           After 1 year I consolidated my knowledge on software architecture. I had my first contact with hexagonal architecture
+                        using Domain Driven Design, at the same time that used Command and Query Responsibility Segregation (CQRS).
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item-center flex items-center justify-center min-w-2/6 hidden md:flex w-1/6 mx-3">
+                    <div class=" flex items-center justify-center bullet bg-gray-200">
+                        2022
+                    </div>
+                </div>
+                <div class="timeline-item-end  w-2/6 md:w-1/4 hidden md:flex items-center justify-start">
+                    <div class="py-8 px-4 flex items-center justify-center ">
+
+                    </div>
+                </div>
+            </div>
+
+            <div ref="t10" id="t10" class="timeline-item flex flex-row justify-center pt-8 pb-4">
+                <div class="timeline-item-start hidden md:flex items-center justify-end w-5/6 md:w-1/4">
+
+                </div>
+                <div class="timeline-item-center md:flex hidden items-center justify-center min-w-1/6 w-1/6 mx-3">
+                    <div class=" flex items-center justify-center bullet bg-gray-200">
+                        2022
+                    </div>
+                </div>
+                <div class="timeline-item-end w-5/6 md:w-1/4 flex items-center justify-start">
+                    <div class="relative bg-gray-300 py-8 px-4 flex flex-col items-center justify-center rounded shadow-lg">
+                        <div class="year-mobile bg-gray-400 md:hidden"> 2022</div>
+                        <div class="arrow-left bg-gray-300 hidden md:block"></div>
+
+                        <div class="inline-flex flex-row flex-wrap justify-around w-full">
+                            <img class="h-16" src="@/assets/images/joomla.png" alt="Joomla logo">
+                            <img class="h-16" src="@/assets/images/docker.png" alt="Docker logo">
+                        </div>
+                        <p class="mt-3">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+<!-- 
+            <div ref="t7" id="t7" class="timeline-item flex flex-row justify-center pt-8 pb-4">
+                <div class="timeline-item-start flex items-center justify-end w-5/6 md:w-1/4">
+                    <div class="relative bg-gray-300 py-8 px-4 flex flex-col items-center justify-center rounded shadow-lg">
+                        <div class="year-mobile bg-gray-400 md:hidden"> 2020</div>
+                        <div class="arrow-right bg-gray-300 hidden md:block"></div>
+
+                        <div class="inline-flex flex-row flex-wrap justify-around w-full">
+                            <img class="h-16" src="@/assets/images/nuxt.png" alt="nuxt logo">
+
+                        </div>
+                        <p class="mt-3">
+                            With a nonstop of learning, I wanted to go the next level with Vue.js, so I started
+                            learning <strong>Nuxt.js</strong>, an open source framework that uses Vue.js to create
+                            Server Side Rendering
+                            web applications.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item-center flex items-center justify-center min-w-2/6 hidden md:flex w-1/6 mx-3">
+                    <div class=" flex items-center justify-center bullet bg-gray-200">
+                        2020
+                    </div>
+                </div>
+                <div class="timeline-item-end  w-2/6 md:w-1/4 hidden md:flex items-center justify-start">
+                    <div class="py-8 px-4 flex items-center justify-center ">
+
+                    </div>
+                </div>
+            </div> -->
+
 
         </div>
 
-        <div ref="t8" id="t8" class="flex flex-row justify-center pb-8">
+        <div ref="last" id="last" class="flex flex-row justify-center pb-8">
             {{ new Date() | moment("dddd, MMMM Do YYYY") }}
         </div>
 
@@ -261,7 +367,7 @@
         },
         mounted() {
             gsap.registerPlugin(TextPlugin, CSSPlugin, ScrollToPlugin);
-            const {title, agree, explanation, tl, t1, t2, t3, t4, t5, t6, t7, t8} = this.$refs;
+            const {title, agree, explanation, tl, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, last} = this.$refs;
 
             this.timeline2
                 .to(window, {duration: 0.5, scrollTo: {y: "#t1", offsetY: 150}})
@@ -300,7 +406,22 @@
                     duration: 0.5,
                     scrollTo: {y: "max"}
                 })
-                .from(t8, 1, {opacity: 0, y: -75, ease: Back.easeOut.config(1.7)})
+                .from(t8, 1, {opacity: 0, x: -75, ease: Back.easeOut.config(1.7)})
+                .to(window, {
+                    duration: 0.5,
+                    scrollTo: {y: "max"}
+                })
+                .from(t9, 1, {opacity: 0, x: 75, ease: Back.easeOut.config(1.7)})
+                .to(window, {
+                    duration: 0.5,
+                    scrollTo: {y: "max"}
+                })
+                .from(t10, 1, {opacity: 0, x: -75, ease: Back.easeOut.config(1.7)})
+                .to(window, {
+                    duration: 0.5,
+                    scrollTo: {y: "max"}
+                })
+                .from(last, 1, {opacity: 0, y: -75, ease: Back.easeOut.config(1.7)})
                 .call(() => this.started = false);
 
 
@@ -329,7 +450,7 @@
             },
             finish() {
                 this.started = false;
-                this.timeline.seek(15);
+                this.timeline.seek(25);
             }
         }
     }

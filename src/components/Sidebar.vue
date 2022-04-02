@@ -15,7 +15,7 @@
     </div>
     <div>
       <p ref="jesus" class="text-2xl font-bold text-white mx-5">Jesús Estévez Rodríguez</p>
-      <p ref="dev" class="text-base uppercase text-white mx-5">Full-stack Developer</p>
+      <p ref="dev" class="text-base uppercase text-white mt-10">Software engineer</p>
     </div>
 
     <div class="mb-32 flex-1">
@@ -37,7 +37,7 @@
           <img class="h-6 w-6 mx-1" src="@/assets/images/linkedin.svg" alt="Linkedin Logo" />
         </a>
       </div>
-      <p class="text-lg text-white">&#169; 2020. All rights reserved.</p>
+      <p class=" text-white mt-8">&#169; {{currentYear}}. All rights reserved.</p>
     </div>
   </aside>
 </template>
@@ -48,7 +48,8 @@ import { TimelineLite, Back, Elastic, Expo } from "gsap";
 export default {
   data() {
     return {
-      timeline: null
+      timeline: null,
+      currentYear: new Date().getFullYear()
     };
   },
   mounted() {
