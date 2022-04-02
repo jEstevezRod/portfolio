@@ -1,53 +1,52 @@
 <template>
-    <div class="timeline-item flex flex-row justify-center py-10">
-        <div class="timeline-item-start flex items-center justify-end w-2/6 md:w-1/4">
-            <div v-if="start" class="bg-red-400 py-8 px-4 flex items-center justify-center rounded">
-                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+         <div :ref="reference" :id="reference" class="timeline-item flex flex-row justify-center pt-8 pb-4">
+                <div class="timeline-item-start flex items-center justify-end w-5/6 md:w-1/4">
+                    <div class="relative bg-gray-300 py-8 px-4 flex flex-col items-center justify-center rounded shadow-lg">
+                        <div class="year-mobile bg-gray-400 md:hidden">{{year}}</div>
+                        <div class="arrow-right bg-gray-300 hidden md:block"></div>
+                        <div class="inline-flex flex-row flex-wrap justify-around w-full">
+                            <template v-if="images.length">
+                                <img class="h-12" v-for="image of images" :key="image" :src="getImagePath(image)" :alt="image">
+                            </template>
+                        </div>
+                        <p class="mt-4">
+                            <span v-html="text"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item-center flex items-center justify-center min-w-2/6 hidden md:flex w-1/6 mx-3">
+                    <div class=" flex items-center justify-center bullet bg-gray-200">
+                        {{year}}
+                    </div>
+                </div>
+                <div class="timeline-item-end  w-2/6 md:w-1/4 hidden md:flex items-center justify-start">
+                    <div class="py-8 px-4 flex items-center justify-center ">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="timeline-item-center flex items-center justify-center min-w-1/6 w-1/6 mx-3">
-            <div class="w-64 h-32  flex items-center justify-center bullet bg-teal-200">
-
-            </div>
-        </div>
-        <div class="timeline-item-end w-2/6 md:w-1/4 flex items-center justify-start">
-            <div v-if="!start" class="py-8 px-4 bg-green-400 flex items-center justify-center rounded">
-                <p v-if="iconCenter">p</p>
-                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            </div>
-        </div>
-    </div>
 </template>
 
 <script>
     export default {
         name: "TimelineItem",
         props: {
-            start: {
-                type: Boolean,
-                default: true
+            images: {
+                type: Array,
+                required: true
             },
-            content: {
-                type: String,
-                default: '',
-            },
-            contentCenter: {
-                type: String,
-                default: '',
-            },
-            iconStart: {
-                type: String,
-                default: ''
-            },
-            iconCenter: {
-                type: String,
-                default: ''
-            },
-            iconEnd: {
-                type: String,
-                default: ''
+            text: String,
+            year: Number,
+            reference: String
+        },
+        computed: {
+    
+        },
+        methods: {
+            getImagePath(key) {
+                return require('@/assets/images/'+ key)
             }
         }
+    
     }
 </script>
 
