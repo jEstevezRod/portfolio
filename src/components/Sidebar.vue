@@ -14,13 +14,14 @@
       </section>
     </div>
     <div>
-      <p ref="jesus" class="text-2xl font-bold text-white mx-5">Jesús Estévez Rodríguez</p>
-      <p ref="dev" class="text-base uppercase text-white mt-10">Software engineer</p>
+      <p ref="jesus" class="text-2xl font-bold text-white mx-5 mt-5">Jesús Estévez Rodríguez</p>
+      <p ref="dev" class="text-base uppercase text-white my-10">Fullstack Developer</p>
     </div>
 
     <div class="mb-32 flex-1">
       <nav id="nav" class="flex justify-center items-center flex-col h-full pb-40">
-        <router-link to="/" exact class="text-xl my-3 text-white">About</router-link>
+        <router-link to="/" exact class="text-xl my-3 text-white">My story</router-link>
+        <router-link to="/tech-stack" exact class="text-xl my-3 text-white">Tech stack</router-link>
         <router-link to="/contact" exact class="text-xl my-3 text-white">Contact</router-link>
         <!--                <router-link to="/projects" exact class="text-xl my-3 text-white">Projects</router-link>-->
       </nav>
